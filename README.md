@@ -1,18 +1,32 @@
-## Getting Started
+# Projeto Loja Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este é um projeto simples em Java para representar o cadastro de produtos, clientes e pedidos de uma loja.
 
-## Folder Structure
+## 📂 Estrutura de Classes
 
-The workspace contains two folders by default, where:
+O projeto contém as seguintes classes:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- **Produto**: Representa um produto com atributos como id, descrição, imagem, preço e estoque.
+- **Cliente**: Representa um cliente com nome, telefone, email, endereço e id.
+- **Pedido**: Representa um pedido com data, status, valor total e o cliente associado.
+- **ItemPedido**: Representa os itens dentro de um pedido, com quantidade, valor e referência ao produto e pedido.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 🚀 Como executar
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+1. Abra o projeto no Visual Studio Code ou em outra IDE Java.
+2. Compile os arquivos `.java`.
+3. Crie um método `main` (em outra classe ou em uma classe de teste) para testar os objetos.
 
-## Dependency Management
+Exemplo de código de teste:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```java
+public class Teste {
+    public static void main(String[] args) {
+        Produto produto = new Produto(1, "Suco de Laranja", "imagem.jpg", 5.99f, 100);
+        Cliente cliente = new Cliente("João", "11999999999", "joao@gmail.com", "Rua A", 1);
+        Pedido pedido = new Pedido("21/06/2025", 1, 1, 0);
+        ItemPedido item = new ItemPedido(2, 11.98f);
+
+        System.out.println("Pedido criado para o cliente: " + cliente.getNome());
+    }
+}
