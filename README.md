@@ -1,6 +1,6 @@
 # Projeto Loja Java
 
-Este é um projeto simples em Java para representar o cadastro de produtos, clientes e pedidos de uma loja.
+Este é um projeto simples em Java para representar o cadastro de produtos, clientes e pedidos de uma Distribuidora de suco.
 
 ## 📂 Estrutura de Classes
 
